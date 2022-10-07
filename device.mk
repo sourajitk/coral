@@ -828,10 +828,6 @@ ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
         persist.vendor.tcpdump.log.br_num=5
 endif
 
-# Preopt SystemUI
-PRODUCT_DEXPREOPT_SPEED_APPS += SystemUIGoogle  # For internal
-PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI  # For AOSP
-
 # Compile SystemUI on device with `speed`.
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.systemuicompilerfilter=speed
