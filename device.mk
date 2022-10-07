@@ -811,7 +811,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.radio.log_prefix="modem_log_"
 
 # Enable modem logging for debug
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.sys.modem.diag.mdlog=true
 else
@@ -821,8 +821,8 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.sys.modem.diag.mdlog_br_num=5
 
-# Enable tcpdump_logger on userdebug and eng
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+# Enable tcpdump_logger on eng
+ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
     PRODUCT_PROPERTY_OVERRIDES += \
         persist.vendor.tcpdump.log.alwayson=false \
         persist.vendor.tcpdump.log.br_num=5
