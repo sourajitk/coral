@@ -836,7 +836,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 TARGET_LMKD_STATS_LOG := true
 
 # default usb oem functions
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
   PRODUCT_PROPERTY_OVERRIDES += \
       persist.vendor.usb.usbradio.config=diag
 endif
