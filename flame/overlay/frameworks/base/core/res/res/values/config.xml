@@ -180,14 +180,16 @@
     <!-- Not allow to switch to higher refresh rate when display brightness setting is
          equal or less than this value -->
     <integer-array name="config_brightnessThresholdsOfPeakRefreshRate">
-        <item>16</item> <!-- 42% UI brightness -->
+        <item>7</item> <!-- 33% UI brightness -->
+        <item>11</item> <!-- 45% UI brightness -->
     </integer-array>
     <integer-array name="config_ambientThresholdsOfPeakRefreshRate">
         <item>-1</item>
+        <item>30</item>
     </integer-array>
 
     <!-- default refresh rate in the zone defined by birghtness and ambient thresholds -->
-    <integer name="config_defaultRefreshRateInZone">60</integer>
+    <integer name="config_defaultRefreshRateInZone">90</integer>
 
     <!-- the number of the max cached processes in the system. -->
     <integer name="config_customizedMaxCachedProcesses">64</integer>
