@@ -935,12 +935,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.gatekeeper.disable_spu = true
 
 # Enable iwlan service logging for debug
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
     PRODUCT_PROPERTY_OVERRIDES += persist.vendor.iwlan.logging.logcat=true
 endif
 
 # Vendor verbose logging default property
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.verbose_logging_enabled=true
 else
